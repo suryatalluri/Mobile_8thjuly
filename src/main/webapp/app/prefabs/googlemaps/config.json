@@ -1,0 +1,200 @@
+{
+  "group": "location",
+  "templateUrl": "/pages/Main/Main.html",
+  "controllerUrl": "/pages/Main/Main.js",
+  "variablesUrl": "/pages/Main/Main.variables.json",
+  "iconUrl": "/resources/images/imagelists/prefab-icon.png",
+  "resources": {
+    "styles": [
+      "/pages/Main/Main.css"
+    ],
+    "scripts": [
+      "https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places,visualization,drawing,geometry"
+    ],
+    "modules": [
+      {
+        "name": "ngMap",
+        "files": [
+          "/resources/js/ng-map.min.js"
+        ]
+      }
+    ]
+  },
+  "properties": {
+    "maptype": {
+      "type": "list",
+      "value": "Markers",
+      "options": [
+        "Markers",
+        "Route",
+        "Heatmap"
+      ],
+      "displayName": "Map Type"
+    },
+    "locations": {
+      "bindable": "in-bound",
+      "type": "array,object",
+      "widget": "string",
+      "show": false
+    },
+    "markertype": {
+      "type": "list",
+      "value": "LatLng",
+      "options": [
+        "Address",
+        "LatLng"
+      ],
+      "show": false,
+      "displayName": "Location Type"
+    },
+    "address": {
+      "type": "string",
+      "options": [],
+      "widget": "list-picker",
+      "show": false
+    },
+    "lat": {
+      "type": "list",
+      "show": false,
+      "displayName": "Marker Latitude"
+    },
+    "lng": {
+      "type": "list",
+      "show": false,
+      "displayName": "Marker Longitude"
+    },
+    "gradient": {
+      "bindable": "in-bound",
+      "type": "array",
+      "widget": "string",
+      "show": false
+    },
+    "pixeldensity": {
+      "type": "number",
+      "value": 10,
+      "show": false,
+      "displayName": "Pixel Density"
+    },
+    "opacity": {
+      "type": "number",
+      "value": 0.8,
+      "show": false
+    },
+    "info": {
+      "type": "list",
+      "show": false,
+      "displayName": "Marker Info"
+    },
+    "icon": {
+      "type": "list",
+      "show": false,
+      "displayName": "Marker Icon"
+    },
+    "shade": {
+      "type": "list",
+      "show": false,
+      "displayName": "Perimeter Color"
+    },
+    "radius": {
+      "type": "list",
+      "show": false,
+      "displayName": "Perimeter Radius"
+    },
+    "origin": {
+      "bindable": "in-out-bound",
+      "type": "string",
+      "show": false
+    },
+    "destination": {
+      "bindable": "in-out-bound",
+      "type": "string",
+      "show": false
+    },
+    "waypoints": {
+      "bindable": "in-bound",
+      "type": "array,object",
+      "widget": "string",
+      "show": false,
+      "displayName": "Way Points"
+    },
+    "stopover": {
+      "type": "boolean",
+      "value": false,
+      "show": false
+    },
+    "travelmode": {
+      "type": "list",
+      "value": "Driving",
+      "options": [
+        "Walking",
+        "Driving",
+        "Transit",
+        "Bicycling"
+      ],
+      "show": false,
+      "displayName": "Travel Mode"
+    },
+    "height": {
+      "type": "string",
+      "value": "400px"
+    },
+    "zoom": {
+      "type": "number",
+      "value": 5
+    },
+    "trafficlayer": {
+      "type": "boolean",
+      "value": false,
+      "show": false,
+      "displayName": "Traffic Layer"
+    },
+    "transitlayer": {
+      "type": "boolean",
+      "value": false,
+      "show": false,
+      "displayName": "Transit Layer"
+    },
+    "refresh": {
+      "type": "method",
+      "method": "refresh"
+    },
+    "markaddress": {
+      "type": "method",
+      "method": "markaddress"
+    },
+    "marklatlng": {
+      "type": "method",
+      "method": "marklatlng"
+    },
+    "removemarker": {
+      "type": "method",
+      "method": "removemarker"
+    },
+    "clearMarkers": {
+      "type": "method",
+      "method": "clearMarkers"
+    },
+    "distance": {
+      "type": "string",
+      "bindable": "out-bound",
+      "show": false
+    },
+    "duration": {
+      "type": "string",
+      "bindable": "out-bound",
+      "show": false
+    },
+    "onMarkerclick": {
+      "type": "event",
+      "widget": "eventlist",
+      "show": true,
+      "disabled": false
+    },
+    "onMarkerhover": {
+      "type": "event",
+      "widget": "eventlist",
+      "show": true,
+      "disabled": false
+    }
+  }
+}

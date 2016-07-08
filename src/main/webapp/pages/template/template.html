@@ -1,0 +1,47 @@
+<wm-page data-ng-controller="templatePageController"> 
+    <wm-left-panel content="leftnav"></wm-left-panel> 
+    <wm-mobile-navbar></wm-mobile-navbar> 
+    <wm-content> 
+        <wm-page-content columnwidth="12"> 
+            <wm-container horizontalalign="center" name="container1"> 
+                <wm-picture name="userPicture" picturesource="http://dev.wavemaker.com/examples/salesrep/Chris-Madison.png" shape="circle" bordercolor="#d8dcdc" borderstyle="solid" width="7.5em" borderwidth="0.25em" margin="2em 0em 0em 0em"></wm-picture> 
+                <wm-label name="userFullName" width="100%" caption="Chris Madison" class="h4" margin="0px 0px 4px 0px"></wm-label> 
+                <wm-label width="100%" name="userLocation" caption="Atlanta, GA" class="h6" margin="0.25em 0em 2em 0em"></wm-label> 
+                <wm-buttongroup name="buttongroup1"> 
+                    <wm-button caption="" name="followUserFacebookBtn" iconclass="fa fa-facebook" fontsize="1.5" fontunit="em" padding="0em 1.2em"></wm-button> 
+                    <wm-button caption="" name="followUserTwitterBtn" iconclass="fa fa-twitter" fontsize="1.5" fontunit="em" padding="0em 1.2em"></wm-button> 
+                    <wm-button caption="" name="followUserGPlusBtn" iconclass="fa fa-google-plus" fontsize="1.5" fontunit="em" padding="0em 1.2em"></wm-button> 
+                </wm-buttongroup> 
+            </wm-container> 
+            <wm-button caption="Follow" name="followUserBtn" width="100%" class="btn-primary btn-lg" margin="1em 0em"></wm-button> 
+            <wm-panel class="panel-primary" collapsible="false" showheader="true" name="aboutPanel" title="About Me" padding="1em"> 
+                <wm-label caption="Architect, @Mobeteq. You can see existing projects. Recent exits include @bot to KCompany, @AnotherIdea to Google" name="aboutcontenttext" margin="2px 0px 0px 0px"></wm-label> 
+            </wm-panel> 
+            <wm-panel class="panel-primary" collapsible="false" showheader="true" title="Contact" name="contactPanel"> 
+                <wm-label caption="chris@mobeteq.com" width="100%" name="experienceDuration"></wm-label> 
+                <wm-label caption="971-001-0022" width="100%" name="companyName"></wm-label> 
+                <wm-label caption="422001111" width="100%" name="companyName"></wm-label> 
+                <wm-label caption="www.mobeteq.com" width="100%" name="companyName"></wm-label> 
+            </wm-panel> 
+            <wm-livelist listclass="list-group" template="true" name="livelist1" dataset="1,2,3" itemclass="media" color="#798082" title="My Posts" class="panel-primary"> 
+                <wm-listtemplate layout="media" name="listtemplate1"> 
+                    <wm-layoutgrid name="layoutgrid1"> 
+                        <wm-gridrow name="gridrow1"> 
+                            <wm-gridcolumn columnwidth="3" name="gridcolumn1"> 
+                                <wm-picture class="media-object picture" shape="circle" width="50" name="picture2" picturesource="http://dev.wavemaker.com/examples/salesrep/Chris-Madison.png"></wm-picture> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn columnwidth="9" name="gridcolumn3"> 
+                                <wm-label name="userAction" caption="Chris posted a photo" width="100%" margin="0px"></wm-label> 
+                                <wm-label name="timePosted" caption="45 min ago" class="h6" color="#c1c1c1" width="100%" margin="2px 0px 0px 0px"></wm-label> 
+                                <wm-label caption="Hi Tim, do you want to go to the conference in June?" name="experienceDuration" width="100%" margin="0px"></wm-label> 
+                                <wm-button caption="" name="likePostBtn" iconclass="fa fa-heart" fontsize="1.5" fontunit="em" borderstyle="none" class="btn-transparent"></wm-button> 
+                                <wm-button caption="" name="sharePostBtn" iconclass="fa fa-wechat" fontsize="1.5" fontunit="em" borderstyle="none" class="btn-transparent"></wm-button> 
+                            </wm-gridcolumn> 
+                        </wm-gridrow> 
+                    </wm-layoutgrid> 
+                </wm-listtemplate> 
+            </wm-livelist> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-mobile-tabbar dataset="home,star,music"></wm-mobile-tabbar> 
+</wm-page>

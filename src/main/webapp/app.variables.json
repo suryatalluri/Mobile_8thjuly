@@ -1,4 +1,46 @@
 {
+  "appInfo" : {
+    "_id" : "wm-getAppInfo-wm.DeviceVariable-1444134876543",
+    "name" : "appInfo",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ ],
+    "service" : "device",
+    "operation" : "getAppInfo",
+    "dataSet" : {
+      "appversion" : "X.X.X",
+      "cordovaversion" : "X.X.X"
+    },
+    "startUpdate" : true
+  },
+  "deviceInfo" : {
+    "_id" : "wm-deviceInfo-getDeviceInfo-wm.DeviceVariable-1444134852623",
+    "name" : "deviceInfo",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ ],
+    "service" : "device",
+    "operation" : "getDeviceInfo",
+    "dataSet" : {
+      "connectionType" : "NONE",
+      "deviceModel" : "DEVICEMODEL",
+      "os" : "DEVICEOS",
+      "osVersion" : "X.X.X",
+      "deviceUUID" : "DEVICEUUID"
+    },
+    "startUpdate" : true
+  },
+  "goToPage_google" : {
+    "_id" : "wm-goToPage_google-wm.NavigationVariable-1467959002467",
+    "name" : "goToPage_google",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "google",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_Main" : {
     "_id" : "wm-wm.NavigationVariable1389180517517",
     "name" : "goToPage_Main",
@@ -6,6 +48,17 @@
     "category" : "wm.NavigationVariable",
     "operation" : "gotoPage",
     "pageName" : "Main"
+  },
+  "goToPage_template" : {
+    "_id" : "wm-goToPage_template-wm.NavigationVariable-1467959368773",
+    "name" : "goToPage_template",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "template",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
   },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",
@@ -18,36 +71,5 @@
     "type" : "string",
     "isList" : false,
     "saveInPhonegap" : false
-  },
-  "deviceInfo": {
-    "owner": "App",
-    "dataSet": {
-      "connectionType": "NONE",
-      "deviceModel": "DEVICEMODEL",
-      "os": "DEVICEOS",
-      "osVersion": "X.X.X",
-      "deviceUUID": "DEVICEUUID"
-    },
-    "dataBinding": [],
-    "service": "device",
-    "operation": "getDeviceInfo",
-    "startUpdate": true,
-    "category": "wm.DeviceVariable",
-    "_id": "wm-deviceInfo-getDeviceInfo-wm.DeviceVariable-1444134852623",
-    "name": "deviceInfo"
-  },
-  "appInfo": {
-    "owner": "App",
-    "dataSet": {
-      "appversion": "X.X.X",
-      "cordovaversion": "X.X.X"
-    },
-    "dataBinding": [],
-    "service": "device",
-    "operation": "getAppInfo",
-    "startUpdate": true,
-    "category": "wm.DeviceVariable",
-    "_id": "wm-getAppInfo-wm.DeviceVariable-1444134876543",
-    "name": "appInfo"
   }
 }

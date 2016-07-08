@@ -1,10 +1,98 @@
 <wm-page data-ng-controller="MainPageController" name="mainpage">
-  <wm-left-panel content="leftnav" columnwidth="2" name="left_panel1"></wm-left-panel>
-  <wm-mobile-navbar name="mobile_navbar1" title="Title" leftnavpaneliconclass="wi wi-menu" backbutton="false">
-    <wm-anchor caption="" name="AddLink" iconclass="wi wi-plus"></wm-anchor>
-  </wm-mobile-navbar>
-  <wm-content name="content1">
-    <wm-page-content columnwidth="12" name="page_content1"></wm-page-content>
-  </wm-content>
-  <wm-mobile-tabbar dataset="home,music,edit" name="mobile_tabbar1"></wm-mobile-tabbar>
+    <wm-left-panel content="leftnav" columnwidth="2" name="left_panel1"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1" title="Title" leftnavpaneliconclass="wi wi-menu" backbutton="false">
+        <wm-anchor caption="" name="AddLink" iconclass="wi wi-plus"></wm-anchor>
+    </wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-segmented-control name="segmented_control1">
+                <wm-segment-content caption="Title 1" name="segment_content1">
+                    <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-2 md-2 lg-3" class="media" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="None" name="livelist1">
+                        <wm-listtemplate layout="media" name="listtemplate1">
+                            <wm-container class="media-left" padding="unset unset unset 0.5em" name="container1">
+                                <wm-picture shape="circle" name="Picture" width="32pt" height="32pt" picturesource="bind:Variables.HrdbEmployeeData.dataSet.picurl"></wm-picture>
+                            </wm-container>
+                            <wm-container class="media-body" name="container2">
+                                <wm-label class="h4" caption="bind:Variables.HrdbEmployeeData.dataSet.firstname" name="Employee Name" margin="0px unset" whitespace="nowrap"></wm-label>
+                                <wm-label name="Date" caption="bind:Variables.HrdbEmployeeData.dataSet.lastname" class="p text-muted" whitespace="nowrap" margin="0px unset unset unset"></wm-label>
+                            </wm-container>
+                            <wm-card name="Media Post" picturesource="bind:Variables.HrdbEmployeeData.dataSet.picurl">
+                                <wm-card-content name="card_content1" padding="1.25em">
+                                    <wm-label caption="bind:Variables.HrdbEmployeeData.dataSet.jobtitle" name="Title" margin="0px unset unset unset" fontunit="em" class="h4"></wm-label>
+                                    <wm-label name="Description" class="p text-muted" whitespace="nowrap" caption="bind:Variables.HrdbEmployeeData.dataSet.department.name" margin="unset unset 1em unset"></wm-label>
+                                    <wm-layoutgrid name="layoutgrid1">
+                                        <wm-gridrow name="gridrow1">
+                                            <wm-gridcolumn columnwidth="4" class="col-xs-4" name="gridcolumn1">
+                                                <wm-anchor color="#d6d82d" caption="READ MORE" fontunit="em" margin="0.8em unset 0em unset" name="anchor2"></wm-anchor>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="8" horizontalalign="right" class="col-xs-8" name="gridcolumn2">
+                                                <wm-anchor iconclass="wi wi-share" fontsize="18" fontunit="pt" class="btn btn-transparent" caption="" margin="unset 0.1em unset unset" name="anchor3"></wm-anchor>
+                                                <wm-anchor class="btn btn-transparent" caption="75" margin="0.2em 1.5em unset unset" fontsize="1.14" fontunit="em" name="anchor4"></wm-anchor>
+                                                <wm-anchor iconclass="wi wi-comments" fontsize="18" fontunit="pt" caption="" class="btn btn-transparent" margin="unset 0.1em unset unset" name="anchor5"></wm-anchor>
+                                                <wm-anchor fontsize="1.14" fontunit="em" caption="50" class="btn btn-transparent" margin="0.2em unset unset unset" name="anchor6"></wm-anchor>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-card-content>
+                            </wm-card>
+                        </wm-listtemplate>
+                    </wm-livelist>
+                </wm-segment-content>
+                <wm-segment-content caption="Title 2" name="segment_content2">
+                    <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-2 md-4 lg-4" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="None" name="livelist2">
+                        <wm-listtemplate layout="media" name="listtemplate2">
+                            <wm-card name="Product Inventory" picturesource="bind:Variables.HrdbEmployeeData.dataSet.picurl">
+                                <wm-card-content name="card_content2">
+                                    <wm-label caption="" margin="0em 0.5em unset unset" fontunit="em" whitespace="nowrap" width="20pt" height="20pt" backgroundcolor="#232020" name="label5"></wm-label>
+                                    <wm-label caption="" margin="0em 0.5em unset unset" fontunit="em" color="#000" whitespace="nowrap" width="20pt" height="20pt" backgroundcolor="#da1212" name="label6"></wm-label>
+                                    <wm-label caption="" margin="0em 0.5em unset unset" fontunit="em" color="#000" whitespace="nowrap" width="20pt" height="20pt" backgroundcolor="#dac112" name="label7"></wm-label>
+                                    <wm-label caption="" margin="0em 0.5em unset unset" fontunit="em" color="#000" whitespace="nowrap" width="20pt" height="20pt" backgroundcolor="#da5512" name="label8"></wm-label>
+                                    <wm-label caption="" margin="0em 0.5em unset unset" fontunit="em" color="#000" whitespace="nowrap" width="20pt" height="20pt" backgroundcolor="#6fda12" name="label9"></wm-label>
+                                    <wm-label caption="" margin="0em 0.5em unset unset" fontunit="em" color="#000" whitespace="nowrap" width="20pt" height="20pt" backgroundcolor="#12a3da" name="label10"></wm-label>
+                                    <wm-label caption="" margin="0em 0.5em unset unset" fontunit="em" color="#000" whitespace="nowrap" width="20pt" height="20pt" backgroundcolor="#da126b" name="label11"></wm-label>
+                                    <wm-label caption="" margin="0em 0.5em unset unset" fontunit="em" color="#000" whitespace="nowrap" width="20pt" height="20pt" backgroundcolor="#12a3da" name="label12"></wm-label>
+                                    <wm-label name="Product" class="h4" caption="bind:Variables.HrdbEmployeeData.dataSet.firstname" margin="unset unset 0px unset"></wm-label>
+                                    <wm-label name="Model" caption="bind:Variables.HrdbEmployeeData.dataSet.lastname" class="p text-muted"></wm-label>
+                                    <wm-label name="Quantity" fontsize="1.286" fontunit="em" caption="bind:Variables.HrdbEmployeeData.dataSet.eid" margin="unset 0.2em unset unset"></wm-label>
+                                    <wm-label name="HelpText" caption="Available"></wm-label>
+                                    <wm-label name="Product Description" class="p text-muted" caption="bind:Variables.HrdbEmployeeData.dataSet.department.name"></wm-label>
+                                </wm-card-content>
+                                <wm-card-footer horizontalalign="center" name="card_footer1">
+                                    <wm-anchor caption="VIEW ALL SPECIFICATIONS" name="anchor7"></wm-anchor>
+                                </wm-card-footer>
+                            </wm-card>
+                        </wm-listtemplate>
+                    </wm-livelist>
+                </wm-segment-content>
+                <wm-segment-content caption="Title 3" name="segment_content3">
+                    <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-2 md-4 lg-4" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="None" name="livelist3">
+                        <wm-listtemplate layout="media" name="listtemplate3">
+                            <wm-card name="Product Thumbnail" picturesource="bind:Variables.HrdbEmployeeData.dataSet.picurl">
+                                <wm-card-content name="card_content3">
+                                    <wm-label name="Product" caption="bind:Variables.HrdbEmployeeData.dataSet.firstname" fontsize="1.286" fontunit="em" margin="unset 0.2em unset unset"></wm-label>
+                                    <wm-label name="Model" caption="bind:Variables.HrdbEmployeeData.dataSet.lastname" class="text-muted"></wm-label>
+                                    <wm-layoutgrid name="layoutgrid2">
+                                        <wm-gridrow name="gridrow2">
+                                            <wm-gridcolumn columnwidth="6" horizontalalign="left" class="col-xs-6" name="gridcolumn3">
+                                                <wm-label name="Currency" caption="bind:Variables.HrdbEmployeeData.dataSet.zip" color="#ba5d1e"></wm-label>
+                                                <wm-label name="Cost" caption="bind:Variables.HrdbEmployeeData.dataSet.picurl" fontsize="1.571" fontunit="em" color="#ba5d1e" margin="unset unset 1px unset"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" horizontalalign="right" class="col-xs-6" name="gridcolumn4">
+                                                <wm-label name="Quantity" fontsize="1.286" fontunit="em" caption="bind:Variables.HrdbEmployeeData.dataSet.eid" margin="unset 0.2em unset unset"></wm-label>
+                                                <wm-label name="HelpText" caption="Available"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-card-content>
+                                <wm-card-footer horizontalalign="center" name="card_footer2">
+                                    <wm-anchor caption="ADD TO CART" class="p" color="#dbce11" name="anchor8"></wm-anchor>
+                                </wm-card-footer>
+                            </wm-card>
+                        </wm-listtemplate>
+                    </wm-livelist>
+                </wm-segment-content>
+            </wm-segmented-control>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar dataset="home,music,edit" name="mobile_tabbar1"></wm-mobile-tabbar>
 </wm-page>

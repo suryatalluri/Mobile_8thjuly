@@ -1,5 +1,5 @@
 var _WM_APP_PROPERTIES = {
-  "activeTheme" : "mobile",
+  "activeTheme" : "blue-flyer",
   "defaultLanguage" : "en",
   "displayName" : "Mobile_8thjuly",
   "homePage" : "Main",
